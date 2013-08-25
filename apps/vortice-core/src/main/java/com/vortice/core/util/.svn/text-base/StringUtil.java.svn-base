@@ -1,0 +1,95 @@
+package com.vortice.util;
+
+import java.io.UnsupportedEncodingException;
+import java.util.Random;
+
+/**
+ * Classe Responsável por auxiliar a manipulação de strings  
+ * @author Amadeu
+ */
+
+public class StringUtil {
+    
+    /**
+     * Recebe uma string e preenche a esquerda com um caracter por uma determinada quantidade de vezes. 
+     * @param string
+     * @param length (quantidade de vezes a serem prenchidos o caracter)
+     * @param character
+     * @return
+     */
+    public static String preencherEsquerda(String string, int length,char character){
+        StringBuffer numFormatado = new StringBuffer(string);
+        while(numFormatado.length()<length){
+            numFormatado.insert(0,character);
+        }
+        return numFormatado.toString();
+    }   
+    
+    /**
+     * Recebe uma string e preenche a direita com um caracter por uma determinada quantidade de vezes. 
+     * @param string
+     * @param length (quantidade de vezes a serem prenchidos o caracter)
+     * @param character
+     * @return
+     */
+    public static String preencherDireita(String string, int length,char character){
+        StringBuffer numFormatado = new StringBuffer(string);
+        while(numFormatado.length()<length){
+            numFormatado.insert(numFormatado.length(),character);
+        }
+        return numFormatado.toString();
+    }  
+    
+    /**
+     * Convert ISO8859-1 format string (which is the default sent by IE
+     * to the UTF-8 format that the database is in.
+     */
+    public static String toUTF8(String isoString) {
+        String utf8String = null;
+        if (null != isoString && !isoString.equals("")){
+            try{
+                byte[] stringBytesISO = isoString.getBytes("ISO-8859-1");
+                utf8String = new String(stringBytesISO, "UTF-8");
+            }catch(UnsupportedEncodingException e){
+                System.out.println("UnsupportedEncodingException is: " + e.getMessage());
+                utf8String = isoString;
+            }
+        }else{
+            utf8String = isoString;
+        }
+        return utf8String;
+    }
+    
+    public static String toISO(String utfString) {
+        String isoString = null;
+        if (null != utfString && !utfString.equals("")){
+            try{
+                byte[] stringBytesUTF = utfString.getBytes("UTF-8");
+                isoString = new String(stringBytesUTF, "ISO-8859-1");
+            }catch(UnsupportedEncodingException e){
+                System.out.println("UnsupportedEncodingException is: " + e.getMessage());
+                isoString = utfString;
+            }
+        }else{
+            isoString = utfString;
+        }
+        return isoString;
+    }  
+    
+    /**
+     * Metodo para gerar palavras aletorias com um tamanho determinado
+     * @param tamanho
+     * @return
+     */
+    public static String geraPalavraAleatoria(int tamanho){
+    	String palavra = "";
+    	String[] arrayStr = new String[]{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "m", "n", "p", "q", "r", "s", "t", "u", "v", "x", "z"};
+    	int length = arrayStr.length;
+    	Random random = new Random();
+    	for (int i = 0; i < tamanho; i++){
+    		if ( i % 2 == 0) palavra += arrayStr[random.nextInt(length)];
+    		else palavra += random.nextInt(9);
+    	}
+    	return palavra;
+    }
+}

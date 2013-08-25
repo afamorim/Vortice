@@ -1,0 +1,70 @@
+package com.vortice.core.util.arquivo;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import com.vortice.core.exception.AmbienteException;
+import com.vortice.core.exception.AplicacaoException;
+
+public class ArquivoUtil {
+	
+	public static byte[] getBytesFromFile(File file) throws AmbienteException, AplicacaoException{
+		try {
+			InputStream is = new FileInputStream(file);
+		    
+	        long length = file.length();
+	    
+	        if (length > Integer.MAX_VALUE) {
+	            throw new AplicacaoException("O arquivo é grande demais.");
+	        }
+	    
+	        byte[] bytes = new byte[(int)length];
+	    
+	        int offset = 0;
+	        int numRead = 0;
+	        while (offset < bytes.length
+	               && (numRead=is.read(bytes, offset, bytes.length-offset)) >= 0) {
+	            offset += numRead;
+	        }
+	    
+	        if (offset < bytes.length) {
+	            throw new AplicacaoException("Não pode completar a leitura do arquivo"+file.getName());
+	        }
+	    
+	        is.close();
+	        return bytes;
+		} catch (IOException e) {
+			throw new AmbienteException("Erro na recuperação dos bytes do arquivo", e);
+		}
+	}
+	
+	public static File criarArquivoTemporario(String prefix, String suffix) throws AmbienteException {
+		try {
+			File file = File.createTempFile(prefix, suffix);
+			file.deleteOnExit();
+			return file;
+		} catch (IOException e) {
+			throw new AmbienteException(e);
+		}
+	}
+	
+	public static File criarArquivoFromBytes(byte[] bytes, String nomeArquivo) throws AmbienteException{
+		File fileTemp = criarArquivoTemporario(
+			nomeArquivo.substring(0, nomeArquivo.lastIndexOf(".")), 
+			nomeArquivo.substring(nomeArquivo.lastIndexOf(".")+1, nomeArquivo.length())
+		);
+		fileTemp.deleteOnExit();
+		try {
+			FileOutputStream fos = new FileOutputStream(fileTemp);
+			fos.write(bytes);
+			fos.flush();
+			fos.close();
+		} catch (IOException e) {
+			throw new AmbienteException(e);
+		}
+		return fileTemp;
+	}
+}

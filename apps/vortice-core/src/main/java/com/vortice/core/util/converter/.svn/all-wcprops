@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/repos/!svn/ver/53/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/util/converter
+END
+CurrencyConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/util/converter/CurrencyConverter.java
+END
+DoubleConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/util/converter/DoubleConverter.java
+END
+DateTimeConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/util/converter/DateTimeConverter.java
+END
+DateConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/util/converter/DateConverter.java
+END
+IntegerConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/util/converter/IntegerConverter.java
+END
+DecimalConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/util/converter/DecimalConverter.java
+END
+TimeConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/util/converter/TimeConverter.java
+END
+LongConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/repos/!svn/ver/53/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/util/converter/LongConverter.java
+END

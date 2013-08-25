@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/view
+END
+BaseComboAjaxActionSpring.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/view/BaseComboAjaxActionSpring.java
+END
+MensagemSucessoIf.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/view/MensagemSucessoIf.java
+END
+MensagensErroIf.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/view/MensagensErroIf.java
+END
+BaseAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/view/BaseAction.java
+END
+BaseActionForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/view/BaseActionForm.java
+END
+BaseComboAjaxAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/view/BaseComboAjaxAction.java
+END
+BasePageBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/view/BasePageBean.java
+END
+Formatador.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/view/Formatador.java
+END

@@ -1,0 +1,19 @@
+package com.vortice.persistencia;
+
+import java.sql.Connection;
+
+import com.vortice.exception.AmbienteException;
+import com.vortice.persistencia.conexao.ConexaoIf;
+
+public class MsSqlDAO extends DataAccessObjectAB {
+	
+	private ConexaoIf conexao;
+	
+	public void setConexao(ConexaoIf conexao) {
+		this.conexao = conexao;
+	}
+	
+	public Connection getConexao() throws AmbienteException{
+		return this.conexao.getConexao();
+	}
+}

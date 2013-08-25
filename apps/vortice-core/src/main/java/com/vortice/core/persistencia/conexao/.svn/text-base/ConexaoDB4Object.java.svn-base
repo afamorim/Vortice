@@ -1,0 +1,5 @@
+package com.vortice.persistencia.conexao;
+
+public class ConexaoDB4Object {
+
+}

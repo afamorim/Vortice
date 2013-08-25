@@ -1,0 +1,89 @@
+package com.vortice.util.email;
+
+import java.io.File;
+
+public class Email {
+	
+	private String			from;
+	private String[] 		to;
+	private String[] 		cc;
+	private String[] 		bcc;
+	private String 			titulo;
+	private String 			texto;
+	private boolean			html;
+	private String[]		images;
+	private ArquivoAnexo[]	arquivos;
+	
+	public String[] getBcc() {
+		return bcc;
+	}
+	
+	public void setBcc(String[] bcc) {
+		this.bcc = bcc;
+	}
+
+	public String[] getTo() {
+		return to;
+	}
+
+	public void setTo(String[] to) {
+		this.to = to;
+	}
+
+	public String[] getCc() {
+		return cc;
+	}
+
+	public void setCc(String[] cc) {
+		this.cc = cc;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+
+	public boolean isHtml() {
+		return html;
+	}
+
+	public void setHtml(boolean html) {
+		this.html = html;
+	}
+
+	public String getFrom() {
+		return from;
+	}
+
+	public void setFrom(String from) {
+		this.from = from;
+	}
+
+	public String[] getImages() {
+		return images;
+	}
+
+	public void setImages(String[] images) {
+		this.images = images;
+	}
+
+	public ArquivoAnexo[] getArquivos() {
+		return arquivos;
+	}
+
+	public void setArquivos(ArquivoAnexo[] arquivos) {
+		this.arquivos = arquivos;
+	}
+
+}

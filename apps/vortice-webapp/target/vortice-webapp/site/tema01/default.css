@@ -1,0 +1,96 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(fundo.jpg);
+	background-attachment: scroll;
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: #008BDA;
+}
+#geral {
+	margin: 20px auto 0px;
+	padding: 0px;
+	width: 696px;
+	border: 1px solid #FFFFFF;
+}
+#topo {
+	background-attachment: scroll;
+	background-image: url(home_fundo01.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin: 0px;
+	padding: 128px 0px 1px 440px;
+}
+#geral { filter:progid:DXImageTransform.Microsoft.Shadow(color=#333333, direction=135, strength=5)
+}
+
+#topo2 {
+
+	background-attachment: scroll;
+	background-image: url(home_fundo02.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 146px;
+}
+#topo img {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	border: 0px;
+}
+#interna {
+	margin: 0px;
+	padding: 0px 0px 5px 190px;
+	background-image: url(interna_fundo.jpg);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-color: #0FC4FF;
+}
+#interna_conteudo {
+	margin: 0px;
+	padding: 5px;
+	width: 490px;
+	background-color: #C1F0FF;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	height: auto;
+}
+#interna_conteudo img {
+	margin: 3px;
+	padding: 0px;
+	border: 1px solid #008BDA;
+	float: left;
+}
+#interna_conteudo h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	padding: 3px;
+	margin: 5px 0px;
+	border: 1px solid #FFFFFF;
+	background-color: #008BDA;
+}
+.link01 {
+	color: #990000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#cliente {
+	margin: 0px;
+	padding: 5px 0px;
+	background-color: #C1F0FF;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}

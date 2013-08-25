@@ -1,0 +1,53 @@
+
+.SnapHeader
+{
+  color: #ffffff;
+  background-color: #757495;
+  background-image: url(images/snap_headerBg.gif); 
+  border: 1px solid #57566F; 
+  font-family: Tahoma;
+  font-weight: bold;
+}
+
+.SnapHeaderCollapsed
+{
+  color: #777777;
+  background-color: #E0DFE3;
+  background-image: url(images/snap_headerCollapsedBg.gif); 
+  border: 1px solid #777777; 
+  font-family: Tahoma;
+  font-weight: bold;
+}
+
+.SnapContent
+{
+  font-family: verdana;
+  font-size: 11px;
+  padding: 3px;
+  border: 1px solid #57566F;
+  border-top-width: 0px;
+  background-color: white;
+  cursor: default;
+}
+
+.Dock
+{
+  padding:5px;
+  border:#AFAFAF 1px solid; 
+  background-color:#D1D1D1;
+}
+
+.Links
+{
+  list-style-image:none;
+  color:Black;
+  font-size:11px;
+}
+
+.AvisoCallback
+{
+  background-color:#FFFFFF;
+  border:1px solid #808080;
+  FONT-FAMILY: Verdana, Arial;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color='#8D8F95',Direction=135,Strength=2);
+}

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/conexao
+END
+ConexaoJdbc.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/conexao/ConexaoJdbc.java
+END
+ConexaoSpring.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/conexao/ConexaoSpring.java
+END
+FabricaConexao.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/conexao/FabricaConexao.java
+END
+ConexaoIf.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/conexao/ConexaoIf.java
+END
+ConexaoDB4Object.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/conexao/ConexaoDB4Object.java
+END

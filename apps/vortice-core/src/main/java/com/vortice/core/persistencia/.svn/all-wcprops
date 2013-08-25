@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia
+END
+MsSqlDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/MsSqlDAO.java
+END
+DB4ObjectDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/DB4ObjectDAO.java
+END
+DataAccessObjectAB.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/DataAccessObjectAB.java
+END
+PostGreSqlDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/PostGreSqlDAO.java
+END
+FabricaDAOIf.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/persistencia/FabricaDAOIf.java
+END

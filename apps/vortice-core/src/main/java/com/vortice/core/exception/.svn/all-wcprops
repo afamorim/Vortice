@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/repos/!svn/ver/64/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/exception
+END
+AmbienteException.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/repos/!svn/ver/12/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/exception/AmbienteException.java
+END
+AplicacaoException.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/repos/!svn/ver/63/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/exception/AplicacaoException.java
+END
+FlexException.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/repos/!svn/ver/64/trunk/Vortice/apps/lib_vortice/src/java/com/vortice/exception/FlexException.java
+END

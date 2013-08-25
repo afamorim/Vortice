@@ -1,0 +1,5 @@
+package com.vortice.persistencia;
+
+public class DB4ObjectDAO {
+
+}
