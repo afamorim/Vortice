@@ -1,6 +1,11 @@
 *.class
+*.DSStore
 
 # Package Files #
-*.jar
 *.war
 *.ear
+
+#Arquivos do eclipse
+.metadata/*.*
+*/target/*.*
+Servers/*.*
