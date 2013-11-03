@@ -25,7 +25,7 @@ public class DateConverter implements Converter {
 	            	return simpleDateFormat.parse(value.toString());
 	            }
 		} catch (Exception e) {
-			String msg = "\""+aUIComponent.getId()+"\": Formato inv·lido.";
+			String msg = "\""+aUIComponent.getId()+"\": Formato inv√°lido.";
             FacesMessage errMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR,msg,msg);
             throw new ConverterException(errMsg);
 		}

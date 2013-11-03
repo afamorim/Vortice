@@ -14,7 +14,7 @@ public class ConexaoSpring extends JdbcDaoSupport implements ConexaoIf {
         try{
 //        	DataSource dataSource = getDataSource();
         	//dataSource.''
-            conn = getDataSource().getConnection();
+            conn = DataSourceUtils.getConnection(getDataSource());
             return conn;
         }catch(Exception e) {
             e.printStackTrace();
