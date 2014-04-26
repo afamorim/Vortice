@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+D:\desenvolvimento\projetos\Vortice\apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1791598108.index
+\vortice-webapp\src\main\resources
+D:\desenvolvimento\projetos\Vortice\apps\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3444419816.index
+\vortice-webapp\src\main\resources

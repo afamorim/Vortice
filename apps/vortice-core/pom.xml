@@ -4,17 +4,17 @@
 	
 	<parent>
 		<groupId>com.vortice</groupId>
-		<artifactId>vortice</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<artifactId>vorticeParent</artifactId>
+		<version>1.0</version>
 	</parent>
 	
 	<groupId>com.vortice.core</groupId>
 	<artifactId>vortice-core</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<name>vortice-core</name>
-	<url>http://maven.apache.org</url>
+	<url>http://www.vortice.com</url>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
