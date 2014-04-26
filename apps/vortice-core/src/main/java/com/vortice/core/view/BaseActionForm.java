@@ -144,7 +144,7 @@ public class BaseActionForm extends ActionForm {
     }
 
     /**
-     * Verifica somente se é numero flutuante 
+     * Verifica somente se ï¿½ numero flutuante 
      * @param pValor
      * @param pNome
      * @return
@@ -157,7 +157,7 @@ public class BaseActionForm extends ActionForm {
     }
     
     /**
-     * Verifica se nulo ou se é numero flutuante 
+     * Verifica se nulo ou se ï¿½ numero flutuante 
      * @param pValor
      * @param pNome
      * @return
@@ -221,7 +221,7 @@ public class BaseActionForm extends ActionForm {
     }
 
     /**
-     * Verifica se a string é nulo ou vazia. Retorna false se isso ocorrer.    
+     * Verifica se a string ï¿½ nulo ou vazia. Retorna false se isso ocorrer.    
      * 
      * @param pObj
      * @param pParametro
@@ -235,7 +235,7 @@ public class BaseActionForm extends ActionForm {
     }
     
     /**
-     * Vrifica se vazio ou é igual a zero
+     * Vrifica se vazio ou ï¿½ igual a zero
      * @param pObj
      * @param pParametro
      * @return
@@ -248,7 +248,7 @@ public class BaseActionForm extends ActionForm {
     }
     
     /**
-     * Verifica se a data está vazia ou está inválida
+     * Verifica se a data estï¿½ vazia ou estï¿½ invï¿½lida
      * @param pObj
      * @param pParametro
      * @return
@@ -262,7 +262,7 @@ public class BaseActionForm extends ActionForm {
 
 
     /**
-     *  É importante retornar boolean para que a classe form filha possa
+     *  ï¿½ importante retornar boolean para que a classe form filha possa
      *  saber se houve algum erro, para manipular alguma acao entre outras coisas.
      *
      **/
@@ -310,7 +310,8 @@ public class BaseActionForm extends ActionForm {
                 addErro(MensagensErroIf.TAMANHO_MAX, parametros);
     }
 
-    protected boolean isData(String pData){
+    @SuppressWarnings("unused")
+	protected boolean isData(String pData){
         String formatoDt = "dd/MM/yyyy";
         try {
            SimpleDateFormat sdf = new SimpleDateFormat(formatoDt);
@@ -328,7 +329,8 @@ public class BaseActionForm extends ActionForm {
 
     }
 
-    protected boolean isData(String pData,String pFormato){
+    @SuppressWarnings("unused")
+	protected boolean isData(String pData,String pFormato){
         String formatoDt = pFormato;
         try {
            SimpleDateFormat sdf = new SimpleDateFormat(formatoDt);
@@ -375,9 +377,10 @@ public class BaseActionForm extends ActionForm {
         }
     }
 
-    public void imprimir(Object o){
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public void imprimir(Object o){
             try{
-                System.out.println("INÍCIO - IMPRIMINDO PROPRIEDADES DE ["+o.getClass().getName()+"]:");
+                System.out.println("INï¿½CIO - IMPRIMINDO PROPRIEDADES DE ["+o.getClass().getName()+"]:");
                 
                 Map map = BeanUtils.describe(o);
                 Set keys = map.keySet();
@@ -449,7 +452,7 @@ public class BaseActionForm extends ActionForm {
    
    /**
     * Retorna o locale configurado no web.xml. (LOCALE_LANGUAGE & LOCALE_COUNTRY)
-    * @return java.util.Locale da Aplicação
+    * @return java.util.Locale da Aplicaï¿½ï¿½o
     */
    protected Locale getLocale(){
        String linguagem = getServlet().getServletConfig().getServletContext().getInitParameter("LOCALE_LANGUAGE");
@@ -459,8 +462,8 @@ public class BaseActionForm extends ActionForm {
    }
    
    /**
-    * Seta no request um código javscript para executar um alert no cliente com a mensagem passada.
-    * Deve ser colocado na página (jsp)   <c:out escapeXml="false" value="${msg}" />
+    * Seta no request um cï¿½digo javscript para executar um alert no cliente com a mensagem passada.
+    * Deve ser colocado na pï¿½gina (jsp)   <c:out escapeXml="false" value="${msg}" />
     * @param request
     * @param msg 
     */

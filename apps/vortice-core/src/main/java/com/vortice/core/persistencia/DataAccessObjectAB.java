@@ -23,6 +23,7 @@ import com.vortice.core.bean.BeanUtil;
 import com.vortice.core.bean.PropertyVO;
 import com.vortice.core.exception.AmbienteException;
 import com.vortice.core.persistencia.conexao.ConexaoIf;
+import com.vortice.core.persistencia.conexao.ConexaoSpring;
 
 public abstract class DataAccessObjectAB {
    
@@ -60,7 +61,13 @@ public abstract class DataAccessObjectAB {
         		stmt.close();
         	}
         	if (conn != null){
-        		conn.close();
+        		if (conexao instanceof ConexaoSpring){
+        			ConexaoSpring conexaoSpring = (ConexaoSpring)conexao;
+        			conexaoSpring.releaseConn(conn);
+        		}else{
+	        		if (!conn.isClosed())
+	        			conn.close();
+        		}
         	}
         }catch(Exception e){
             throw new AmbienteException("Erro ao tentar fechar conexao, statement ou resultSet. Contate o seu administrador.", e);
@@ -71,12 +78,12 @@ public abstract class DataAccessObjectAB {
       try {
             Object objeto = null;
     
-            Object valor = null;
-            String propertComposta = null;
-            PropertyDescriptor propertyInfo = null;
-            Object objectTemp = null;
-            Object objectCurrent = null;
-            String propertSimples = null;
+//            Object valor = null;
+//            String propertComposta = null;
+//            PropertyDescriptor propertyInfo = null;
+//            Object objectTemp = null;
+//            Object objectCurrent = null;
+//            String propertSimples = null;
             if (rs.next()){
                 objeto = tipo.newInstance();
                 for (int i = 0; i < propertes.length; i++) {
@@ -97,11 +104,11 @@ public abstract class DataAccessObjectAB {
         ArrayList lista = new ArrayList();
         try{
              Object vo = null;
-             String propertComposta = null;
-             PropertyDescriptor propertyInfo = null;
-             Object objectTemp = null;
-             Object objectCurrent = null;
-             String propertSimples = null;
+//             String propertComposta = null;
+//             PropertyDescriptor propertyInfo = null;
+//             Object objectTemp = null;
+//             Object objectCurrent = null;
+//             String propertSimples = null;
              while (rs.next()){
                      vo = tipo.newInstance();
                      for (int i = 0; i < propertes.length; i++) {

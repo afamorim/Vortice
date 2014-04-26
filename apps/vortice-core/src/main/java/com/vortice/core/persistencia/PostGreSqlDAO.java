@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 
 import com.vortice.core.exception.AmbienteException;
 import com.vortice.core.exception.AplicacaoException;
+import com.vortice.core.persistencia.conexao.ConexaoSpring;
 import com.vortice.core.view.MensagensErroIf;
 
 /**
@@ -59,7 +60,8 @@ public class PostGreSqlDAO extends DataAccessObjectAB{
 	  	}catch(SQLException sqlEx){
 	  		throw new AmbienteException(sqlEx);
 	  	}finally{
-	  		super.fechar(conn, stmt, rs);
+	  		if (!(getTipoConexao() instanceof ConexaoSpring))
+	  			super.fechar(conn, stmt, rs);
 	  	}
 	}
     
