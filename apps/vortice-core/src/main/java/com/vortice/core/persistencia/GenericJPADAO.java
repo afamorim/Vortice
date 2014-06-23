@@ -9,18 +9,22 @@ import javax.persistence.Query;
 import com.vortice.core.abstracao.Entidade;
 
 @SuppressWarnings("unchecked")
-public class GenericJPADAO<E extends Entidade> {
+public class GenericJPADAO<E extends Entidade, ID> {
 
 	private EntityManager	entityManager;
 	
-	private Class<E>		eClass;
+	private Class<E>		entityClass;
 	
-	public GenericJPADAO(EntityManager aEntityManager){
-		entityManager = aEntityManager;
-		if (aEntityManager == null){
-			throw new RuntimeException("O Objeto DAO não recebeu uma conexão apropriada, contate o administrador.");
-		}
-		eClass = (Class<E>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+//	public GenericJPADAO(EntityManager aEntityManager){
+//		entityManager = aEntityManager;
+//		if (aEntityManager == null){
+//			throw new RuntimeException("O Objeto DAO não recebeu uma conexão apropriada, contate o administrador.");
+//		}
+//		entityClass = (Class<E>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+//	}
+	
+	public GenericJPADAO(){
+		entityClass = (Class<E>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 	
 	public E insert(E e){
@@ -44,13 +48,16 @@ public class GenericJPADAO<E extends Entidade> {
 	}
 	
 	public List<E> findAll(){
-		String sql = (new StringBuilder().append("SELECT obj FROM ").append(eClass.getSimpleName()).append(" obj")).toString();
+		String sql = (new StringBuilder().append("SELECT obj FROM ").append(entityClass.getSimpleName()).append(" obj")).toString();
 		Query query = entityManager.createQuery(sql);
 		return query.getResultList();
 	}
 	
 	//TODO DESENVOLVER MÉTODO FIND BY FILTER
 	public List<E> findByFilter(E e){
+//		Criteria c = getSession().createCriteria(getEntityClass());
+//		c.add(Example.create(exampleInstance).enableLike());
+//		return c.list();
 		return null;
 	}
 
@@ -65,4 +72,16 @@ public class GenericJPADAO<E extends Entidade> {
 		this.entityManager = aEntityManager;
 	}
 	
+	public Class<E> getEntityClass() {
+		if (entityClass == null) {
+			ParameterizedType type = (ParameterizedType) getClass().getGenericSuperclass();
+			Object o = type.getActualTypeArguments()[0];
+			this.entityClass = (Class<E>) o;
+		}
+		return entityClass;
+	}
+    
+    public void setEntityClass(Class<E> entityClass) {
+		this.entityClass = entityClass;
+	}
 }

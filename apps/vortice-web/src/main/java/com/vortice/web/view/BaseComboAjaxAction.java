@@ -1,4 +1,4 @@
-package com.vortice.core.view;
+package com.vortice.web.view;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -63,10 +63,10 @@ public abstract class BaseComboAjaxAction extends HttpServlet {
 	}
     
     /**
-     * Retorna a coleção que o combo será preenchido.
+     * Retorna a coleï¿½ï¿½o que o combo serï¿½ preenchido.
      * @param request
      * @param response
-     * @return uma coleção 
+     * @return uma coleï¿½ï¿½o 
      */
     protected abstract Collection getCollection(HttpServletRequest request, HttpServletResponse response)
         throws AmbienteException,AplicacaoException;

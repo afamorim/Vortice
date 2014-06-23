@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 import com.vortice.core.exception.AmbienteException;
 import com.vortice.core.exception.AplicacaoException;
 import com.vortice.core.persistencia.conexao.ConexaoSpring;
-import com.vortice.core.view.MensagensErroIf;
+import com.vortice.core.util.MensagensErroIf;
 
 /**
  * @author Antonio Fernando

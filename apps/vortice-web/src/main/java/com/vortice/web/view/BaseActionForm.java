@@ -1,4 +1,4 @@
-package com.vortice.core.view;
+package com.vortice.web.view;
 
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;

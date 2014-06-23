@@ -1,4 +1,4 @@
-package com.vortice.core.view;
+package com.vortice.web.view;
 
 import org.apache.log4j.Logger;
 

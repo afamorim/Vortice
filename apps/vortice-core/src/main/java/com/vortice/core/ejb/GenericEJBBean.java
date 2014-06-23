@@ -1,5 +1,6 @@
 package com.vortice.core.ejb;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -7,11 +8,12 @@ import javax.persistence.EntityManager;
 import com.vortice.core.abstracao.Entidade;
 import com.vortice.core.persistencia.GenericJPADAO;
 
-public class GenericEJBBean<E extends Entidade> {
+@SuppressWarnings({"unused"})
+public class GenericEJBBean<E extends Entidade, ID extends Serializable> {
 
 	private EntityManager	entityManager;
 	
-	private GenericJPADAO<E> genericJPADAO;
+	private GenericJPADAO<E, ID> genericJPADAO;
 	
 	public E insert(E e){
 		return genericJPADAO.insert(e);
@@ -33,11 +35,15 @@ public class GenericEJBBean<E extends Entidade> {
 		return genericJPADAO.findAll();
 	}
 
-	public void setGenericJPADAO(GenericJPADAO<E> genericJPADAO) {
-		this.genericJPADAO = genericJPADAO;
-	}
-
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
+	}
+	
+	public void setDAO(GenericJPADAO<E, ID> dao) {
+		this.genericJPADAO = dao;
+	}
+	
+	public GenericJPADAO<E, ID> getDAO() {
+		return genericJPADAO;
 	}
 }

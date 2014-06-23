@@ -1,4 +1,4 @@
-package com.vortice.core.view;
+package com.vortice.web.view;
 
 import java.beans.PropertyDescriptor;
 import java.io.IOException;
@@ -11,8 +11,12 @@ import java.util.List;
 
 import javax.faces.application.Application;
 import javax.faces.application.FacesMessage;
+import javax.faces.application.FacesMessage.Severity;
 import javax.faces.context.FacesContext;
+import javax.faces.context.Flash;
 import javax.faces.model.SelectItem;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -84,6 +88,27 @@ public class BasePageBean implements Serializable {
 		}
 	}
 	
+	public void addMessage(Severity severity,String id,String title,String mensagem){
+		FacesMessage msg = new FacesMessage(severity, title, mensagem);  
+		FacesContext.getCurrentInstance().addMessage(id, msg);
+		
+		Flash flash = FacesContext.getCurrentInstance().getExternalContext().getFlash();
+		flash.setKeepMessages(true);
+		flash.setRedirect(true);
+	}
+	
+	public void addMessageSucesso(String id,String title,String mensagem){
+		addMessage(FacesMessage.SEVERITY_INFO, id, title, mensagem);
+    }
+    
+    public void addMessageSucesso(String id,String mensagem){
+        addMessage(FacesMessage.SEVERITY_INFO,id,"INFO",mensagem);
+    }
+    
+    public void addMessageSucesso(String mensagem){
+        addMessageSucesso(null,mensagem);
+    }
+	
 	public String tratarExcecao(Exception e){
 		FacesMessage msgs = null;
 		LOG.debug("FacesContext.getCurrentInstance() " + FacesContext.getCurrentInstance());
@@ -112,7 +137,19 @@ public class BasePageBean implements Serializable {
 		FacesContext.getCurrentInstance().addMessage(null, msgs);
         return falha;
 	}
+	
+	protected HttpServletRequest getRequest(){
+		return (HttpServletRequest)FacesContext.getCurrentInstance().getExternalContext().getRequest();
+	}
+	
+	protected HttpSession getSession(){
+		return getRequest().getSession();
+	}
     
+	protected HttpServletResponse getResponse(){
+		return (HttpServletResponse)FacesContext.getCurrentInstance().getExternalContext().getResponse();
+	}
+	
     protected void registrarMensagem(String msg){
         FacesMessage msgs = new FacesMessage(msg);
         getFacesContext().addMessage(null, msgs);
