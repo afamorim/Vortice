@@ -19,13 +19,13 @@ public class NumeroExtensoConverter {
 			{"centavo", "centavos"},
 			{"", ""},
 			{"mil", "mil"},
-			{"milh�o", "milh�es"},
-			{"bilh�o", "bilh�es"},
-			{"trilh�o", "trilh�es"},
-			{"quatrilh�o", "quatrilh�es"},
-			{"quintilh�o", "quintilh�es"},
-			{"sextilh�o", "sextilh�es"},
-			{"septilh�o", "septilh�es"}
+			{"milhão", "milhões"},
+			{"bilhão", "bilhões"},
+			{"trilhão", "trilhões"},
+			{"quatrilhão", "quatrilhões"},
+			{"quintilhão", "quintilhões"},
+			{"sextilhão", "sextilhões"},
+			{"septilhão", "septilhões"}
 			};
 	private String Numeros[][] = {
 			{"zero", "um", "dois", "tr�s", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez",

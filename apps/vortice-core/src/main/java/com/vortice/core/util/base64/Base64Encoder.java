@@ -174,7 +174,7 @@ public class Base64Encoder extends FilterOutputStream {
     catch (IOException ignored) { return null; }
   }
   /**
-   * Codifica um objeto serializ·vel em um texto.
+   * Codifica um objeto serializ√°vel em um texto.
    * @param objeto
    * @return
    */

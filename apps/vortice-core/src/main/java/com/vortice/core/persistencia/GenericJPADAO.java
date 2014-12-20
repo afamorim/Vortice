@@ -6,10 +6,14 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Example;
+
 import com.vortice.core.abstracao.Entidade;
 
 @SuppressWarnings("unchecked")
-public class GenericJPADAO<E extends Entidade, ID> {
+public class GenericJPADAO<E extends Entidade> {
 
 	private EntityManager	entityManager;
 	
@@ -39,8 +43,10 @@ public class GenericJPADAO<E extends Entidade, ID> {
 	}
 	
 	public void delete(E e){
-		e = entityManager.merge(e);
-		entityManager.remove(e);
+//		e = entityManager.merge(e);
+//		entityManager.remove(e);
+		getEntityManager().remove(getEntityManager().contains(e) ? e : getEntityManager().merge(e));
+        getEntityManager().flush();
 	}
 	
 	public E findByPrimaryKey(E e){
@@ -53,12 +59,11 @@ public class GenericJPADAO<E extends Entidade, ID> {
 		return query.getResultList();
 	}
 	
-	//TODO DESENVOLVER MÉTODO FIND BY FILTER
 	public List<E> findByFilter(E e){
-//		Criteria c = getSession().createCriteria(getEntityClass());
-//		c.add(Example.create(exampleInstance).enableLike());
-//		return c.list();
-		return null;
+		Criteria c = ((Session)getEntityManager().getDelegate()).createCriteria(getEntityClass());
+		c.add(Example.create(e).enableLike());
+		return c.list();
+//		return null;
 	}
 
 	public EntityManager getEntityManager() {
@@ -84,4 +89,5 @@ public class GenericJPADAO<E extends Entidade, ID> {
     public void setEntityClass(Class<E> entityClass) {
 		this.entityClass = entityClass;
 	}
+
 }

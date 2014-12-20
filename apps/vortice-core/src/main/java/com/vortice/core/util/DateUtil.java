@@ -77,7 +77,7 @@ public class DateUtil {
     
     
     /**
-     * Retorna uma nova data somada de um m�s.
+     * Retorna uma nova data somada de um mês.
      * @param data
      * @return
      */

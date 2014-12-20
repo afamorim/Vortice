@@ -25,7 +25,7 @@ public class TimeConverter extends ConverterException {
 	            }
 		} catch (Exception e) {
 			e.printStackTrace();
-			String msg = "\""+aUIComponent.getId()+"\": Formato inv·lido de Hora.";
+			String msg = "\""+aUIComponent.getId()+"\": Formato inv√°lido de Hora.";
             FacesMessage errMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR,msg,msg);
             throw new ConverterException(errMsg);
 		}

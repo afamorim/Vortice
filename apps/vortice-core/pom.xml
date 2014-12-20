@@ -10,7 +10,7 @@
 	
 	<groupId>com.vortice.core</groupId>
 	<artifactId>vortice-core</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.7-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>vortice-core</name>
@@ -119,5 +119,43 @@
 			<version>1.0</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+			<scope>provided</scope>
+			<version>3.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+	    	<artifactId>hibernate-core</artifactId>
+			<scope>provided</scope>
+			<version>4.2.7.SP1</version>
+		</dependency>
 	</dependencies>
+	
+	<build>
+		<finalName>vortice-core</finalName>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+		<plugins>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			
+		</plugins>
+	</build>
 </project>

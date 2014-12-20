@@ -26,7 +26,7 @@ public class DecimalConverter implements Converter {
                 return new Float(formatter.parse(value.toString()).doubleValue());
             }
         }catch(ParseException pe){
-            String msg = "\""+pUIComponent.getId()+"\": Formato inv·lido.";
+            String msg = "\""+pUIComponent.getId()+"\": Formato inv√°lido.";
             FacesMessage errMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR,msg,msg);
             throw new ConverterException(errMsg);
         }

@@ -47,7 +47,7 @@ public class DateTimeConverter implements Converter {
             }
         }
 
-        throw new ConversionException("Não pode converter "
+        throw new ConversionException("NÃ£o pode converter "
                                       + value.getClass().getName() + " para "
                                       + type.getName() + "!");
     }

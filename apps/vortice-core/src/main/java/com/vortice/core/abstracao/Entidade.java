@@ -1,14 +1,11 @@
 package com.vortice.core.abstracao;
 
-public class Entidade {
+import java.io.Serializable;
 
-	private Long	codigo;
+@SuppressWarnings("serial")
+public interface Entidade<ID> extends Serializable{
 
-	public Long getCodigo() {
-		return codigo;
-	}
+	public abstract ID getCodigo();
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+	public abstract void setCodigo(ID codigo);
 }

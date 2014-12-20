@@ -7,7 +7,7 @@ package com.vortice.core.exception;
  * Classe de Exception que irá tratar as Exceptions de Ambiente.
  * @author Fernando Amorim
  */
-public class AmbienteException extends Exception{
+public class AmbienteException extends RuntimeException{
 	
 	/**
 	 * Constutor que ir passar uma mensagem e a exception que foi lançada.

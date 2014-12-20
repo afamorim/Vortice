@@ -9,7 +9,7 @@ import org.apache.commons.beanutils.Converter;
 
 
 /**
- * Esta classe é chamda através do método BeanUtils.copyPropertes para converter 
+ * Esta classe Ã© chamda atravÃ©s do mÃ©todo BeanUtils.copyPropertes para converter 
  * Float.  
  * 
  * @author amadeu
@@ -48,7 +48,7 @@ public class FloatConverter implements Converter {
             }
         }
 
-        throw new ConversionException("Não pode converter "
+        throw new ConversionException("NÃ£oo pode converter "
                                       + value.getClass().getName() + " para "
                                       + type.getName() + "!");
     }

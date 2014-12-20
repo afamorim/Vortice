@@ -56,7 +56,7 @@ public class EmailUtilVortice {
             tr.close();
         }catch(Exception e){
             e.printStackTrace();
-            throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+            throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
         }    
         
     }
@@ -106,7 +106,7 @@ public class EmailUtilVortice {
             tr.close();
         }catch(Exception e){
             e.printStackTrace();
-            throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+            throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
         }    
        
     }
@@ -161,7 +161,7 @@ public class EmailUtilVortice {
             tr.close();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+            throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
         }
         
         return;
@@ -218,7 +218,7 @@ public class EmailUtilVortice {
 			throw e;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+			throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
 		}
 		return;
     }
@@ -249,7 +249,7 @@ public class EmailUtilVortice {
 			throw e;
 		} catch (Exception e) {
             e.printStackTrace();
-            throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+            throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
         }
         
        
@@ -334,7 +334,7 @@ public class EmailUtilVortice {
 			throw e;
 		} catch(Exception e){
 			e.printStackTrace();
-		throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+		throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
 		}    
 	}
     
@@ -380,7 +380,7 @@ public class EmailUtilVortice {
 			throw e;
 		}catch (Exception e) {
 			e.printStackTrace();
-			throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+			throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
 		}
 		return;
     }
@@ -418,7 +418,7 @@ public class EmailUtilVortice {
 			throw e;
 		}catch(Exception e){
 			e.printStackTrace();
-			throw new AplicacaoException("Mensagem de e-mail n„o enviada", e);
+			throw new AplicacaoException("Mensagem de e-mail n√£o enviada", e);
 		}
 	}
     
@@ -482,7 +482,7 @@ public class EmailUtilVortice {
 			throw e;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+			throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
 		}
 		
 		return;
@@ -553,7 +553,7 @@ public class EmailUtilVortice {
 			throw e;
 		}catch (Exception e) {
 			e.printStackTrace();
-			throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+			throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
 		}
 		return;
     }

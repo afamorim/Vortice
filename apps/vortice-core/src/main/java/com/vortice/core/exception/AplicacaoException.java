@@ -4,11 +4,14 @@
  */
 package com.vortice.core.exception;
 
+import javax.ejb.ApplicationException;
+
 /**
  * Classe responsavel por tratar as exceptions da Aplicacao.
  *
  * @author Fernando Amorim
  */
+@ApplicationException(rollback=true)
 public class AplicacaoException extends Exception {
 
 	private Integer codigo;

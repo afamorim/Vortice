@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
 /**
- * Classe Responsável por auxiliar a manipulação de strings  
+ * Classe ResponsÃ¡vel por auxiliar a manipulaï¿½ï¿½o de strings  
  * @author Amadeu
  */
 
