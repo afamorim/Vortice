@@ -26,24 +26,23 @@ import com.vortice.core.exception.AplicacaoException;
 
 public class EmailUtilVortice {
 
-    public EmailUtilVortice(){}
+	public EmailUtilVortice(){}
     
-    private static Logger LOG = Logger.getLogger(EmailUtilVortice.class);
+	private static Logger LOG = Logger.getLogger(EmailUtilVortice.class);
     
 
-    public static void enviarEmailComAutenticacao(String smtphost, String username, 
-                                                  String password, String subject, String from, String fromText, 
-                                                  String to, String text) throws AplicacaoException {
-    	try{
-            String mailer = "JavaMail API";
-            Properties props = System.getProperties();
-            props.put("mail.smtp.auth", "true");
+	public static void enviarEmailComAutenticacao(String smtphost, String username, 
+			String password, String subject, String from, String fromText, 
+			String to, String text) throws AplicacaoException {
+		try{
+			String mailer = "JavaMail API";
+			Properties props = System.getProperties();
+			props.put("mail.smtp.auth", "true");
            
-
-            Session session = Session.getDefaultInstance(props, null);
-            MimeMessage msg = new MimeMessage(session);
-            msg.setFrom(new InternetAddress(from, fromText));
-            msg.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(to, false));
+			Session session = Session.getDefaultInstance(props, null);
+			MimeMessage msg = new MimeMessage(session);
+			msg.setFrom(new InternetAddress(from, fromText));
+			msg.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(to, false));
             System.setProperty("mail.mime.charset","UTF-8");
             msg.setSubject(MimeUtility.encodeText(subject));//, "UTF-8");
             msg.setText(text);
@@ -108,9 +107,8 @@ public class EmailUtilVortice {
             e.printStackTrace();
             throw new AplicacaoException("Mensagem de E-mail não enviada", e);
         }    
-       
     }
-    
+  
     public static void enviarEmailHTMLTextComAutenticacaoGmail(String smtphost, String username, String password, String subject, 
                                                           String from, String fromText, String to, String htmlText,
                                                           File images[]) throws AplicacaoException {

@@ -60,8 +60,8 @@ public class PostGreSqlDAO extends DataAccessObjectAB{
 	  	}catch(SQLException sqlEx){
 	  		throw new AmbienteException(sqlEx);
 	  	}finally{
-//	  		if (!(getTipoConexao() instanceof ConexaoSpring))
-	  		super.fechar(conn, stmt, rs);
+	  		if (!(getTipoConexao() instanceof ConexaoSpring))
+	  			super.fechar(conn, stmt, rs);
 	  	}
 	}
     

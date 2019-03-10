@@ -32,14 +32,16 @@ public class GenericJPADAO<E extends Entidade> {
 	}
 	
 	public E insert(E e){
-		entityManager.clear();
-		entityManager.persist(e);
-		
+		/*entityManager.clear();
+		entityManager.persist(e);*/
+		e = entityManager.merge(e);
+		entityManager.flush();
 		return e;
 	}
 	
 	public void update(E e){
 		entityManager.merge(e);
+		getEntityManager().flush();
 	}
 	
 	public void delete(E e){
