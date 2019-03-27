@@ -10,3 +10,7 @@
 */target/*.*
 Servers/*.*
 apps/.metadata/
+apps/vortice-core/.settings/
+apps/vortice-core/bin/
+apps/vortice-core/.classpath
+apps/vortice-core/.project
